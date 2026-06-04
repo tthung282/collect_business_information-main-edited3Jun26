@@ -78,17 +78,6 @@
   <script>
     // Redirect after 5 seconds
 
-    let score1 = Number(localStorage.getItem("question1") || 0)
-    let score2 = Number(localStorage.getItem("question2") || 0)
-    let score3 = Number(localStorage.getItem("question3") || 0)
-    let score4 = Number(localStorage.getItem("question4") || 0)
-    let score5 = Number(localStorage.getItem("question5") || 0)
-    let total_score = score1 + score2 + score3 + score4 + score5
-    
-// If total score is 5-8, show Step 8(a)
-// If total score is 9-12, show Step 8(b)
-// If total score is 13-16, show Step 8(c)
-// If total score is 17-20, show Step 8(d)
     window.onload = function () {
       const loading = document.getElementById("loading");
       const scriptURL = "https://script.google.com/macros/s/AKfycbz4pv_VZchz4c9g5VlQZr4BQj1nxGWZwwPxhw62SnBZwgdrWBHieqJ7mhsx5k6NWPMo/exec";
@@ -98,14 +87,10 @@
       
         answers.append("name", localStorage.getItem("name") || "");
         answers.append("email", localStorage.getItem("email") || "");
-        answers.append("phone", localStorage.getItem("phone") || "");
-        answers.append("industry", localStorage.getItem("industry") || "");
-        answers.append("sellBusiness", localStorage.getItem("sellBusiness") || "");
         answers.append("question1", localStorage.getItem("question1") || "");
         answers.append("question2", localStorage.getItem("question2") || "");
         answers.append("question3", localStorage.getItem("question3") || "");
         answers.append("question4", localStorage.getItem("question4") || "");
-        answers.append("question5", localStorage.getItem("question5") || "");
     
         fetch(scriptURL, {
             method: "POST",
