@@ -91,7 +91,7 @@
 // If total score is 17-20, show Step 8(d)
     window.onload = function () {
       const loading = document.getElementById("loading");
-      const scriptURL = "https://script.google.com/macros/s/AKfycbxiNpETKqnwe1EkN_fRrFNk4ZgLCYpi0Xiq_aVblger2mOngneVcW17H6LQqCkTJ0u2Mg/exec";
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxvNFq5pskjcGA_aJkSdoDaN5AjLCj0slwuS_ADZaE8vhfzman_tOJKVf7i400ZSS6Y/exec";
       
         // Collect all answers from localStorage
         const answers = new FormData();
@@ -117,14 +117,7 @@
             // go to next page after saving
             
         setTimeout(function () {
-          if (total_score>=5 & total_score<=8)
-          {window.location.href = "index7.html";}
-          else if (total_score>=9 & total_score<=12)
-          {window.location.href = "index7.html";}
-          else if (total_score>=13 & total_score<=16)
-          {window.location.href = "index7.html";}
-          else if (total_score>=17 & total_score<=20)
-          {window.location.href = "index7.html";}
+          window.location.href = "index7.html";
         }, 2000);
           })
           .catch(err =>{
